@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/move-forward', function(req, res, next) {
-  shell.exec('python goforward.py');
+  shell.exec('python go.py');
   res.json({success:true, res:null});
 });
 
