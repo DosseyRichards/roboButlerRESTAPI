@@ -53,6 +53,7 @@ class GoForward():
             r.sleep()
             c = c + 1 
             if c == 120:
+                time.sleep(3)
                 break
         move_cmd.linear.x = 0
     # let's turn at 0 radians/s
@@ -66,7 +67,6 @@ class GoForward():
             r.sleep()
             c = c + 1 
             if c == 73:
-                time.sleep(3)
                 break
         move_cmd = Twist()
     # let's go forward at 0.2 m/s
