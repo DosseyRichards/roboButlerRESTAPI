@@ -66,6 +66,7 @@ class GoForward():
             r.sleep()
             c = c + 1 
             if c == 73:
+                time.slee(2)
                 break
         move_cmd = Twist()
     # let's go forward at 0.2 m/s
