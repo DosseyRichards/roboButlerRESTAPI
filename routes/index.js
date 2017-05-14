@@ -21,5 +21,9 @@ router.get('/turn-around-move-forward', function(req, res, next) {
   shell.exec('turnaround.py');
 });
 
+router.get('/test', function(req, res, next) {
+  console.log("it works");
+  res.json({success:true, res:null});
+});
 
 module.exports = router;
