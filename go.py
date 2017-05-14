@@ -53,7 +53,7 @@ class GoForward():
             r.sleep()
             c = c + 1 
             if c == 120:
-                time.sleep(3)
+                time.sleep(4)
                 break
         move_cmd.linear.x = 0
     # let's turn at 0 radians/s
