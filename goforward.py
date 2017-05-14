@@ -51,7 +51,7 @@ class GoForward():
 	    # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
                         
-        
+    c = 0 
     def shutdown(self):
         # stop turtlebot
         rospy.loginfo("Stop TurtleBot")
@@ -59,6 +59,10 @@ class GoForward():
         self.cmd_vel.publish(Twist())
 	# sleep just makes sure TurtleBot receives the stop command prior to shutting down the script
         rospy.sleep(1)
+        c = c + 1 
+        if c == 30:
+            break
+
  
 if __name__ == '__main__':
     try:
