@@ -51,7 +51,7 @@ class GoForward():
 	    # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1 
-            if c == 70:
+            if c == 200:
                 break
         move_cmd.linear.x = 0
     # let's turn at 0 radians/s
@@ -79,7 +79,7 @@ class GoForward():
         # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1 
-            if c == 70:
+            if c == 200:
                 break
 
 
