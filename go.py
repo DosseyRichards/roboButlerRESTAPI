@@ -102,9 +102,6 @@ class GoForward():
  
 if __name__ == '__main__':
     try:
-        s = Sound() 
-        s.read('beeeep.wav') 
-        s.play()
         GoForward()
     except:
         rospy.loginfo("GoForward node terminated.")
