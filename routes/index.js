@@ -12,12 +12,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/move-forward', function(req, res, next) {
   shell.exec('python goforward.py');
+  shell.exec('kill');
 });
 
 
 
 router.get('/turn-around-move-forward', function(req, res, next) {
-  shell.exec('goforward.py');
+  shell.exec('turnaround.py');
 });
 
 
