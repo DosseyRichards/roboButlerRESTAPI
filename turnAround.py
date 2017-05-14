@@ -42,9 +42,9 @@ class GoForward():
 	# let's go forward at 0.2 m/s
         move_cmd.linear.x = 0
 	# let's turn at 0 radians/s
-	move_cmd.angular.z = 3
+	    move_cmd.angular.z = 3
 
-    c = 0
+        c = 0
 
 	# as long as you haven't ctrl + c keeping doing...
         while not rospy.is_shutdown():
@@ -55,7 +55,7 @@ class GoForward():
             c = c + 1
             if c == 50:
                 break
-                
+
                         
         
     def shutdown(self):
