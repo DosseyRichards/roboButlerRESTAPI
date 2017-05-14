@@ -43,15 +43,17 @@ class GoForward():
         move_cmd.linear.x = 0.2
 	# let's turn at 0 radians/s
 	move_cmd.angular.z = 0
-
+        c = 0 
 	# as long as you haven't ctrl + c keeping doing...
         while not rospy.is_shutdown():
 	    # publish the velocity
             self.cmd_vel.publish(move_cmd)
 	    # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
+            c = c + 1 
+            if c == 30:
+                break
                         
-    c = 0 
     def shutdown(self):
         # stop turtlebot
         rospy.loginfo("Stop TurtleBot")
@@ -59,9 +61,7 @@ class GoForward():
         self.cmd_vel.publish(Twist())
 	# sleep just makes sure TurtleBot receives the stop command prior to shutting down the script
         rospy.sleep(1)
-        c = c + 1 
-        if c == 30:
-            break
+        
 
  
 if __name__ == '__main__':
