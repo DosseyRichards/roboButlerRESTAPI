@@ -53,7 +53,6 @@ class GoForward():
             c = c + 1 
             if c == 30:
                 break
-        sleep(1)
         move_cmd.linear.x = 0
     # let's turn at 0 radians/s
         move_cmd.angular.z = 0.5
@@ -65,7 +64,7 @@ class GoForward():
         # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1 
-            if c == 90:
+            if c == 80:
                 break
         move_cmd = Twist()
     # let's go forward at 0.2 m/s
