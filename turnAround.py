@@ -40,9 +40,9 @@ class GoForward():
         # Twist is a datatype for velocity
         move_cmd = Twist()
 	# let's go forward at 0.2 m/s
-        move_cmd.linear.x = 0.2
+        move_cmd.linear.x = 0
 	# let's turn at 0 radians/s
-	move_cmd.angular.z = 3 
+	move_cmd.angular.z = 3
 
     c = 0
 
@@ -53,8 +53,9 @@ class GoForward():
 	    # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1
-            if c == 30:
+            if c == 50:
                 break
+                
                         
         
     def shutdown(self):
