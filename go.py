@@ -17,6 +17,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 # python goforward.py
 
 import rospy
+import time 
 from geometry_msgs.msg import Twist
 
 class GoForward():
@@ -57,6 +58,7 @@ class GoForward():
     # let's turn at 0 radians/s
         move_cmd.angular.z = 0.5
         c = 0 
+        time.sleep(3)
     # as long as you haven't ctrl + c keeping doing...
         while not rospy.is_shutdown():
         # publish the velocity
@@ -64,7 +66,7 @@ class GoForward():
         # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1 
-            if c == 75:
+            if c == 73:
                 break
         move_cmd = Twist()
     # let's go forward at 0.2 m/s
