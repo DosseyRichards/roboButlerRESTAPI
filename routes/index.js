@@ -12,7 +12,6 @@ router.get('/', function(req, res, next) {
 
 router.get('/move-forward', function(req, res, next) {
   shell.exec('python goforward.py');
-  shell.exec('kill');
 });
 
 
