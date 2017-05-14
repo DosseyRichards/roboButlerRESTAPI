@@ -65,7 +65,7 @@ class GoForward():
         # wait for 0.1 seconds (10 HZ) and publish again
             r.sleep()
             c = c + 1 
-            if c == 72:
+            if c == 73:
                 time.sleep(3)
                 break
         move_cmd = Twist()
